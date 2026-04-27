@@ -1,4 +1,4 @@
-# SKILL LAB PRATICAL HACKATHON
+
 
 ## Final Project README
 
@@ -75,7 +75,8 @@ Crash Guard Pro
 
 `(because Project-or)`
 
-<img width="1600" height="1131" alt="image" src="https://github.com/user-attachments/assets/c64bfbd4-b3b7-43d9-83ad-c203a5aa11bc" />
+<<img width="1024" height="559" alt="WhatsApp Image 2026-04-27 at 3 35 55 PM" src="https://github.com/user-attachments/assets/e402f4b9-394e-4223-be4f-5fcb2a03da14" />
+ />
 
 ## 1.4 One-Line Pitch
 
@@ -90,9 +91,17 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-This project focuses on developing a smart helmet safety system designed to enhance rider safety through real-time monitoring and automated emergency response. The system uses sensors such as the MPU6050 to detect head movement and identify signs of drowsiness or sudden impact. An alcohol sensor is integrated to ensure that the rider is not under the influence before starting the vehicle. If unsafe conditions are detected, the system provides immediate alerts through vibration and audio feedback.
+This project focuses on developing an interactive, sensor-driven helmet that responds to user behavior and environmental conditions while also recording interaction data.
 
-In the event of an accident, the helmet acts as a black box and emergency system, automatically sending alerts to predefined contacts using a GSM module. The system can also log critical data for post-incident analysis. Additional communication modules such as Bluetooth or WiFi can be used for monitoring and future extensions. By combining embedded systems, sensors, and communication technologies, this project aims to create a low-cost, scalable solution for improving road safety, especially for two-wheeler riders.
+The system uses multiple sensors to capture different types of input. The MPU6050 detects head movement and orientation, allowing the system to respond dynamically to motion patterns. A capacitive touch sensor enables direct user interaction, triggering changes in system behavior or activating different modes. An MQ sensor is used to detect alcohol presence, which alters how the system reacts to the user.
+
+All inputs are processed in real time by the microcontroller, which determines the system state and generates corresponding outputs. Feedback is provided through a buzzer, producing different sound patterns depending on the input conditions and combinations.
+
+The helmet also functions as a black box system using an SD card module. It continuously logs motion data, sensor readings, and key events, creating a record of interactions over time. This allows the system to not only respond but also store and reflect past behavior.
+
+Additionally, a Bluetooth module enables external interaction with the system. It allows wireless communication for control, monitoring, or extending system functionality through a connected device.
+
+By combining motion sensing, environmental detection, touch interaction, and data logging, the project creates a wearable system that is both reactive and memory-enabled, focusing on interaction and experience rather than traditional safety-only functionality.
 
 ---
 
@@ -100,125 +109,208 @@ In the event of an accident, the helmet acts as a black box and emergency system
 
 ## 2.1 Experience, Not Social Problem
 
-This module does **not** require your project to solve a large social problem.
+This project does not aim to solve a large-scale social problem. Instead, it is designed as an interactive wearable artifact that explores how a helmet can behave as a responsive and expressive object.
 
-You are allowed to build:
+The system transforms a conventional helmet into an interactive entity that reacts to user behavior and environmental conditions. It integrates motion sensing, touch interaction, alcohol detection, wireless communication, and data logging to create a layered experience.
 
-- toys,
-- games,
-- interactive objects,
-- playful machines,
-- kinetic artifacts,
-- humorous devices,
-- strange but delightful experiences,
-- things that are entertaining to use or watch.
+The focus of the project is on:
 
+- interaction rather than utility  
+- responsiveness rather than passive use  
+- experience rather than problem-solving  
+
+The helmet behaves as a system that:
+
+- responds to movement and touch  
+- changes behavior based on detected alcohol levels  
+- produces feedback through sound  
+- records interactions as data  
+
+This makes the helmet a playful and slightly unpredictable object that invites exploration and experimentation.
 
 
 # 3. Inspiration
 
 ## 3.1 References
 
-List what inspired the project.
+| Source Type | Title / Link | What Inspired You |
+|------------|-------------|------------------|
+| `[Concept]` | Interactive wearable systems | The idea that objects can respond dynamically to human input |
+| `[Technology]` | Sensor fusion systems | Combining multiple inputs to create richer and more complex interaction behavior |
 
-| Source Type | Title / Link                                                        | What Inspired You                                                                         |
-| ----------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `[Video]`   | `https://www.instagram.com/reel/DW4CT7WCDry/?igsh=cXg3dzAxYmdncDBo` | `How projection mapping can be used to create interactive digital + physical experiences` |
-|             |                                                                     |                                                                                           |
-|             |                                                                     |                                                                                           |
 
 ## 3.2 Original Twist
 
-What makes your project original?
+**Response:**
 
-**Response:**  
+The originality of this project lies in transforming a helmet into a multi-sensory, context-aware interactive system that not only reacts but also records interactions.
 
+Unlike conventional systems that rely on a single input, this project integrates:
 
----
+- motion sensing using the MPU6050  
+- touch-based interaction  
+- alcohol detection using an MQ sensor  
+- wireless interaction through Bluetooth  
+- event logging using an SD card module  
+
+The system behaves differently depending on combinations of inputs rather than isolated triggers.
+
+For example:
+
+- motion alone produces a normal response  
+- motion combined with alcohol detection alters the behavior significantly  
+- touch input can activate or modify interaction modes  
+
+Additionally, the inclusion of a black box using the SD card module introduces a memory aspect, allowing the helmet to log and store interaction data over time.
+
+This shifts the system from being purely reactive to being both reactive and reflective, as it maintains a record of its interactions.
+
 
 # 4. Project Intent
 
-## 4.1 User Journey 
+## 4.1 User Journey
 
-Describe exactly how a user will use the project.Make it a story
-**Response:**  
+**Response:**
 
-                                                  |
+A user picks up the helmet and puts it on. As soon as it is powered, the system begins monitoring movement, touch, and environmental conditions.
 
+When the user moves their head, the helmet detects motion through the MPU6050 and responds with sound feedback. The responses vary depending on the intensity and pattern of movement.
 
+If the user touches the helmet, the touch sensor triggers a change in interaction mode. The helmet may respond differently to movement or activate a new behavior pattern.
 
----
+If alcohol is detected through the MQ sensor, the helmet changes its behavior. The responses may become more aggressive or persistent, indicating a shift in system state.
+
+At the same time, all interactions are being recorded through the SD card module. Movement data, detection events, and system responses are logged continuously.
+
+Through the Bluetooth module, the system can also be influenced externally, allowing additional interaction or control from a connected device.
+
+As the user continues interacting, the helmet creates a dynamic loop of sensing, reacting, and recording, making the experience engaging and exploratory.
+
 
 # 5. Definition of Success
 
 ## 5.1 Definition of “Usable”
 
+A usable system is one where:
+
+- all sensors function reliably  
+- the system responds consistently to user input  
+- feedback is clearly perceivable through the buzzer  
+- data is successfully logged to the SD card  
+- the interaction feels responsive and intentional  
 
 
 ## 5.2 Minimum Usable Version
 
-What is the smallest version of this project that still delivers the core experience?
+**Response:**
 
-**Response:**  
+The minimum usable version of this project includes:
+
+- MPU6050 for motion detection  
+- MQ sensor for alcohol detection  
+- buzzer for feedback  
+- microcontroller for processing  
+
+In this version:
+
+- motion triggers sound responses  
+- alcohol detection changes the response pattern  
+
+This delivers the core experience of a reactive helmet that responds to both movement and environmental conditions.
 
 
 ## 5.3 Stretch Features
 
 What features are nice to have but not essential?
 
-
----
-
+- integration of Bluetooth for wireless interaction  
+- addition of touch sensor for mode switching  
+- SD card logging for black box functionality  
+- more complex behavior patterns based on multiple sensor combinations  
+- adjustable sensitivity and thresholds  
+- mobile app interface for monitoring or control  
 # 6. System Overview
 
 ## 6.1 Project Type
 
 Check all that apply.
 
-- [x] Electronics-based
-
-- [ ] Mechanical
-
-- [x] Sensor-based
-
-- [x] App-connected
-
-- [x] Motorized
-
-- [ ] Sound-based
-
-- [x] Light-based
-
-- [x] Screen/UI-based
-
-- [x] Fabricated structure
-
-- [x] Game logic based
-
-- [x] Installation
-
+- [x] Electronics-based  
+- [ ] Mechanical  
+- [x] Sensor-based  
+- [x] App-connected  
+- [ ] Motorized  
+- [x] Sound-based  
+- [ ] Light-based  
+- [ ] Screen/UI-based  
+- [x] Fabricated structure  
+- [ ] Game logic based  
+- [x] Installation  
 - [ ] Other:
+
 
 ## 6.2 High-Level System Description
 
-Explain how the system works in simple terms.
+**Response:**
 
-Include:
+The system is a wearable interactive helmet that senses user behavior and environmental conditions, processes this data, and produces feedback while also recording interactions.
 
-- input,
-- processing,
-- output,
-- physical structure,
-- app interaction if any.
+### Input
 
-**Response:**  
+The system takes input from multiple sensors:
+
+- MPU6050 for motion and orientation detection  
+- MQ sensor for alcohol detection  
+- Capacitive touch sensor for user interaction  
+- Bluetooth module for external input from a connected device  
+
+### Processing
+
+All sensor data is sent to the microcontroller, where it is analyzed in real time.
+
+The system processes:
+
+- motion intensity and patterns  
+- touch activation signals  
+- alcohol detection levels  
+- Bluetooth commands  
+
+Based on predefined logic, the system determines the current state and selects the appropriate response.
+
+### Output
+
+The system produces output through:
+
+- a buzzer that generates different sound patterns  
+- behavior changes based on input combinations  
+- data logging to the SD card module (black box)  
+
+### Physical Structure
+
+All components are integrated into a helmet structure, making it a wearable system. The placement of sensors ensures accurate detection of head movement, touch interaction, and environmental conditions.
+
+### App Interaction
+
+The Bluetooth module allows communication with an external device such as a smartphone. This can be used to:
+
+- send commands to the system  
+- modify behavior modes  
+- monitor interaction data  
+
+---
 
 ## 6.3 Input / Output Map
 
-| System Part                              | Type            | What It Does                                                               |
-
-
----
+| System Part        | Type     | What It Does |
+|------------------|---------|-------------|
+| MPU6050          | Input    | Detects head movement, tilt, and acceleration |
+| MQ Sensor        | Input    | Detects alcohol presence in the environment |
+| Touch Sensor     | Input    | Detects user touch to trigger interaction modes |
+| Bluetooth Module | Input    | Receives external commands from a connected device |
+| Microcontroller  | Process  | Processes all inputs and decides system behavior |
+| Buzzer           | Output   | Produces sound feedback based on system state |
+| SD Card Module   | Output   | Stores sensor data and event logs as a black box |
+| Helmet Structure | Physical | Houses all components and enables wearable interaction |
 
 # 7. Sketches and Visual Planning
 
@@ -228,6 +320,8 @@ Add an early sketch of the full idea.
 
 **Insert image below:**  
 `[Upload image and link here]`
+<img width="1200" height="1600" alt="WhatsApp Image 2026-04-27 at 3 48 28 PM" src="https://github.com/user-attachments/assets/49b5c634-900b-4b53-b781-04ff7420c76e" />
+
 
 Example:
 
@@ -249,16 +343,7 @@ Add a sketch with labels showing:
 
 **Insert image below:**  
 `[Upload image and link here]`
-<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/95637f31-b4e7-4427-a9e1-4b63fbeb0ac5" />
-
-## 7.3 Approximate Dimensions
-
-| Dimension        | Value   |
-| ---------------- | ------- |
-| Length           | `16 cm` |
-| Width            | `16 cm` |
-| Height           | `8 cm`  |
-| Estimated weight | `400 g` |
+<img width="900" height="1600" alt="WhatsApp Image 2026-04-27 at 4 37 07 PM" src="https://github.com/user-attachments/assets/210d19eb-965c-40ae-98b6-4c3a8439edc8" />
 
 ---
 
@@ -266,26 +351,38 @@ Add a sketch with labels showing:
 
 ## 8.1 Electronics Used
 
-| Component                 | Quantity | Purpose                               |
-| ------------------------- | --------:| ------------------------------------- |
-| `[ESP32]`                 | `1`      | `[Main controller]`                   |
-| `[L298N Motor Driver]`    | `1`      | `[Control Motors]`                    |
-| `[BO Motors]`             | `2`      | `[Rotate wheels]`                     |
-| `[Buck Converter]`        | `1`      | `[Power ESP32]`                       |
-| `[Li Ion Battery Pack]`   | `2`      | `[Power]`                             |
-| `[Projector]`             | `1`      | `[Display obstacles]`                 |
-| `Camera (Webcam / Phone)` | `1`      | `[Tracks car position using markers]` |
-
+| Component                 | Quantity | Purpose |
+|--------------------------|---------:|---------|
+| `[Raspberry Pi Pico / RP2040]` | `1` | Main controller for processing sensor data |
+| `[MPU6050]`              | `1`      | Detects head movement, tilt, and acceleration |
+| `[MQ Sensor]`            | `1`      | Detects alcohol presence |
+| `[Capacitive Touch Sensor]` | `1`   | Detects user touch and triggers interaction modes |
+| `[Bluetooth Module (HC-05/HC-06)]` | `1` | Enables wireless communication with external device |
+| `[Buzzer]`               | `1`      | Provides sound-based feedback |
+| `[SW125 SD Card Module]` | `1`      | Stores sensor data and event logs (black box) |
+| `[Micro SD Card]`        | `1`      | Storage medium for logged data |
+| `[Helmet Structure]`     | `1`      | Houses all components and enables wearable interaction |
 ## 8.2 Wiring Plan
 
 Describe the main electrical connections.
 
 **Response:**  
-`The ESP32 is connected to the motor driver (L298N) using four GPIO pins (18,19; 22,23) to control motor direction (IN1, IN2, IN3, IN4). Two PWM-capable pins (ENA and ENB; 25 and 26) are connected to control the speed of each motor.
+The microcontroller connects to multiple sensors and modules using dedicated GPIO pins for communication and control.
 
-The motors are connected to the output terminals of the motor driver. The motor driver is powered directly by the battery pack (higher voltage), while the ESP32 receives regulated 5V from the buck converter.
+The MPU6050 is connected using I2C communication, with SDA connected to IO9 and SCL connected to IO10. It operates at 3.3V and shares a common ground.
 
-All components share a common ground to ensure stable operation. The projector and camera are connected to the laptop, which handles tracking and game logic separately.`
+The SD card module (HW-125) is connected using SPI communication. MISO is connected to IO21, MOSI to IO24, SCK to IO23, and CS to IO22. The module is powered using 5V and shares a common ground.
+
+The Bluetooth module communicates via UART, with TX connected to IO6 and RX connected to IO5. It is powered using 5V.
+
+The MQ sensor is connected through its analog output pin (AO) to IO26 for alcohol detection. It is powered using 5V.
+
+The capacitive touch sensor is connected to IO19 for detecting user interaction and operates at 3.3V.
+
+The buzzer is connected to IO20 and is used to provide sound feedback. Its negative terminal is connected to ground.
+
+All components share a common ground to ensure stable and reliable operation.
+
 
 ## 8.3 Circuit Diagram
 
@@ -293,62 +390,66 @@ Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
 `[Upload image and link here]`
-<img width="867" height="1156" alt="" src="" />
+
+<img width="1536" height="1024" alt="ChatGPT Image Apr 27, 2026, 04_43_25 PM" src="https://github.com/user-attachments/assets/8265a5f4-d3e9-4d27-bd7c-72d2bab6c929" />
+
 
 
 # 9. Power Plan
 
-| Question         | Response                                                                                                                                          |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Power source     | `Battery (Li-ion pack)`                                                                                                                           |
-| Voltage required | `~6–8.4V for motors (via driver), stepped down to 5V for ESP32 (buck converter)`                                                                  |
-| Current concerns | `Motors can draw high current under load, which may cause voltage drops affecting ESP32 and WiFi stability`                                       |
-| Safety concerns  | `Avoid over-discharging Li-ion batteries, ensure proper voltage regulation, prevent short circuits, and secure wiring to avoid loose connections` |
+| Question         | Response |
+|------------------|----------|
+| Power source     | `External regulated power supply / USB power` |
+| Voltage required | `3.3V for MPU6050 and touch sensor, 5V for MQ sensor, Bluetooth module, and SD card module` |
+| Current concerns | `MQ sensor and SD module may draw higher current; stable power supply is required to avoid fluctuations` |
+| Safety concerns  | `Ensure correct voltage levels, avoid short circuits, and maintain proper grounding across all components` |
 
----
 
 # 10. Software Planning
 
 ## 10.1 Software Tools
 
-| Tool / Platform                | Purpose                                        |
-| ------------------------------ | ---------------------------------------------- |
-| `[MicroPython]`                | `Control ESP32`                                |
-| `[Python/PyGame/OpenCV]`       | `Track markers, game logic, create projection` |
-| `[Fusion/Blender/Illustrator]` | `[Prototyping structure]`                      |
-|                                |                                                |
+| Tool / Platform        | Purpose |
+|------------------------|---------|
+| `[MicroPython / C++]`  | Control microcontroller and sensors |
+| `[Serial Monitor / Bluetooth Terminal]` | Debugging and communication |
+| `[Optional Mobile Interface]` | Future interaction via Bluetooth |
+
 
 ## 10.2 Software Logic
 
 Describe what the code must do.
 
-Include:
-
-- startup behavior,
-- input handling,
-- sensor reading,
-- decision logic,
-- output behavior,
-- communication logic,
-- reset behavior.
-
 **Response:**  
-`
 
 - **Startup behavior:**  
-  The ESP32 initializes motor pins, PWM control, and starts a WiFi access point with a web server. The laptop initializes camera input, tracking system, and projection mapping.
+  The system initializes all GPIO pins, sets up I2C for MPU6050, SPI for SD card, UART for Bluetooth, and configures analog and digital inputs.
+
 - **Input handling:**  
-  Movement commands are received from the laptop (pygame sends http requests)
+  The system continuously monitors motion data from the MPU6050, touch input from the capacitive sensor, alcohol levels from the MQ sensor, and commands from the Bluetooth module.
+
 - **Sensor reading:**  
-  The camera continuously captures frames, and OpenCV detects ArUco markers to determine the car’s position and orientation.
+  Motion data is read via I2C, alcohol levels are read from the analog pin, and touch input is read as a digital signal.
+
 - **Decision logic:**  
-  The system maps the car’s position into a virtual coordinate system and checks for nearby obstacles or collisions. If movement is valid, the command is allowed; if not, it is blocked or replaced with a feedback action (like a slight shake).
+  The system evaluates input conditions:
+  - motion patterns
+  - touch interaction
+  - alcohol detection threshold  
+  Based on these, it determines the system state and selects the appropriate response.
+
 - **Output behavior:**  
-  The ESP32 drives the motors using PWM signals to control speed and direction. The projector displays the updated game environment, including obstacles, targets, and feedback visuals.
+  The buzzer generates different sound patterns depending on system conditions and input combinations.
+
+- **Data logging:**  
+  Important events such as motion changes and alcohol detection are logged to the SD card module using SPI communication.
+
 - **Communication logic:**  
-  The laptop sends HTTP requests (e.g., `/forward`, `/left`) to the ESP32 over WiFi. The ESP32 parses these commands and executes motor actions.
+  The Bluetooth module receives external commands which can modify system behavior or trigger actions.
+
 - **Reset behavior:**  
-  If no command is received within a short timeout, the ESP32 stops the motors. The game resets when a level is completed or restarted.`
+  If no significant input is detected, the system returns to a default idle state and continues monitoring inputs.
+
 
 ## 10.3 Code Flowchart
 
@@ -356,18 +457,17 @@ Insert a flowchart showing your code logic.
 
 Suggested sequence:
 
-- start,
-- initialize,
-- wait for input,
-- read input,
-- decision,
-- trigger output,
-- repeat or reset,
-- error handling.
+- start  
+- initialize system  
+- read sensor inputs  
+- check conditions  
+- trigger output  
+- log data  
+- repeat loop  
+- handle errors if any  
 
 **Insert image below:**  
-<img width="1600" height="1200" alt="image" src="" />
-<img width="1600" height="1200" alt="image" src="" />
+<img width="1024" height="1536" alt="ChatGPT Image Apr 27, 2026, 04_56_51 PM" src="https://github.com/user-attachments/assets/d0916c44-bc96-4b16-881b-07b41ed062f0" />
 
 
 
@@ -376,157 +476,147 @@ Suggested sequence:
 
 ## 11.1 Full BOM
 
-| Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec               | Why This Choice?          |
-| -------------------------------- | --------:| ------- | ------------ | --------------:| ----------------------------- | ------------------------- |
-| `[ESP32]`                        | `1`      | `Yes`   | `No`         | `0`            | `38 Pin ESP32`                | `[To control components]` |
-| `[Motor Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[LN296]`                     | `[To drive both motors]`  |
-| `[DC Motors and wheel]`          | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[high torque motors]`    |
-| `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                               |                           |
-| `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                               |                           |
+| Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec            | Why This Choice? |
+|----------------------------------|---------:|--------|-------------|---------------:|---------------------------|------------------|
+| `[Raspberry Pi Pico / RP2040]`   | `1`      | `Yes`  | `No`        | `0`            | `RP2040 Microcontroller`  | Main controller for processing sensor data |
+| `[MPU6050]`                      | `1`      | `Yes`  | `No`        | `0`            | `6-axis IMU sensor`       | Detects head movement and orientation |
+| `[MQ Sensor]`                    | `1`      | `Yes`  | `No`        | `0`            | `Gas/Alcohol sensor`      | Detects alcohol presence |
+| `[Capacitive Touch Sensor]`      | `1`      | `Yes`  | `No`        | `0`            | `Touch module`            | Enables user interaction and mode switching |
+| `[Bluetooth Module (HC-05/HC-06)]` | `1`    | `Yes`  | `No`        | `0`            | `UART communication`      | Enables wireless control and monitoring |
+| `[Buzzer]`                       | `1`      | `Yes`  | `No`        | `0`            | `Piezo buzzer`            | Provides sound-based feedback |
+| `[SW125 SD Card Module]`         | `1`      | `Yes`  | `No`        | `0`            | `SPI interface`           | Stores sensor data and event logs |
+| `[Micro SD Card]`                | `1`      | `No`   | `Yes`       | `150`          | `8–16 GB`                 | Storage medium for black box data |
+| `[Helmet Structure]`             | `1`      | `Yes`  | `No`        | `0`            | `Standard helmet`         | Houses components and enables wearable interaction |
+
+---
 
 ## 11.2 Material Justification
 
-Explain why you selected your main materials and components.
-
 **Response:**  
-`DC motors (BO motors) were chosen instead of servos or steppers because the system requires continuous rotation for movement rather than precise angular control (Previously, we were considering using steppers as we were planning on tracking movement on the ESP using its relative position from an origin, but since we're using a camera now, this is not required). A motor driver (L298N) was used to allow bidirectional control and speed variation using PWM.`
+The Raspberry Pi Pico was selected as the main controller due to its simplicity, sufficient processing capability, and compatibility with multiple sensors and communication modules.
 
+The MPU6050 was chosen for motion sensing because it provides both accelerometer and gyroscope data, allowing accurate detection of head movement and orientation.
 
-## 11.3 Items You chose
+The MQ sensor was used for alcohol detection as it is low-cost and suitable for detecting gas-based inputs in real-time applications.
 
-| Item                 | Why Needed               | Purchase Link | Latest Safe Date to Procure | Status       |
-| -------------------- | ------------------------ | ------------- | --------------------------- | ------------ |
-| `BO Motors + Wheels` | `Drive system for car`   | `robu.in`     | `15th April`                | `[Received]` |
-| `Buck Converter`     | `Stable power for ESP32` | `local store` | `before testing`            | `[Received]` |
-| `Li-ion Batteries`   | `Portable power`         | `local store` | `before testing`            | `Recieved`   |
+A capacitive touch sensor was included to enable direct user interaction, allowing the system to switch modes or trigger responses.
+
+The Bluetooth module was selected to provide wireless communication, enabling external control and system extension without adding complex infrastructure.
+
+The buzzer was used as a simple and effective output device to provide immediate feedback based on system behavior.
+
+The SW125 SD card module was included to implement black box functionality, allowing the system to log data and store interaction history.
+
+---
+
+## 11.3 Items You Chose
+
+| Item                     | Why Needed                         | Purchase Link | Latest Safe Date to Procure | Status       |
+|--------------------------|----------------------------------|--------------|----------------------------|--------------|
+| `Micro SD Card`          | `Storage for black box logging`   | `Amazon / Robu` | `Before testing phase`     | `[Pending / Received]` |
+| `Bluetooth Module`       | `Wireless communication`          | `Lab / Store`  | `Before integration`       | `[Available]` |
+| `Touch Sensor`           | `User interaction input`          | `Lab`          | `Before testing`           | `[Available]` |
+
+---
 
 ## 11.4 Budget Summary
 
 | Budget Item           | Estimated Cost              |
-| --------------------- | ---------------------------:|
-| Electronics           | `[400]`                     |
-| Mechanical parts      | `[200]`                     |
-| Fabrication materials | `[0 (Available on campus)]` |
-| Purchased extras      | `[0]`                       |
-| Contingency           | `[300]`                     |
-| **Total**             | `[900]`                     |
-
-## 11.5 Budget Reflection
-
-If your cost is too high, what can be simplified, removed, substituted, or shared?
-
-**Response:**  
+|----------------------|---------------------------:|
+| Electronics          | `[150]`                    |
+| Mechanical parts     | `[0 (helmet available)]`   |
+| Fabrication materials| `[0 (available in lab)]`   |
+| Purchased extras     | `[150]`                    |
+| Contingency          | `[200]`                    |
+| **Total**            | `[500]`                    |
 
 ---
 
+## 11.5 Budget Reflection
+
+**Response:**  
+The project is already low-cost due to the use of components available in the lab. The only additional cost is the micro SD card for storage.
+
+If cost needs to be reduced further:
+
+- Bluetooth functionality can be removed as it is not essential for core interaction  
+- SD card logging can be simplified or removed if only real-time interaction is required  
+- Touch input can be replaced with predefined automatic behavior  
+
+However, these reductions would decrease the overall interactivity and completeness of the system.
 # 12. Planning the Work
 
 ## 12.1 Team Working Agreement
 
-Write how your team will work together.
-
-Include:
-
-- how tasks are divided,
-- how decisions are made,
-- how progress will be checked,
-- what happens if a task is delayed,
-- how documentation will be maintained.
-
 **Response:**  
 
+The team divided tasks based on individual strengths in electronics, coding, testing, and documentation. Each member was responsible for a primary area while also supporting others during integration.
+
+Decisions were made collaboratively through group discussions, especially for design choices, sensor selection, and system behavior. If disagreements arose, the team evaluated feasibility, simplicity, and implementation time before finalizing decisions.
+
+Progress was checked regularly through informal reviews and testing sessions after each major step, such as sensor integration, wiring, and code implementation.
+
+If a task was delayed, responsibilities were redistributed temporarily to ensure that overall progress was not affected. Team members assisted each other to resolve blockers quickly.
+
+Documentation was maintained continuously by updating the markdown file after each stage of development, including changes in design, wiring, code, and testing results.
+
+---
 
 ## 12.2 Task Breakdown
 
-| Task ID | Task                    | Owner    | Estimated Hours | Deadline     | Dependency | Status |
-| ------- | ----------------------- | -------- | ---------------:| ------------ | ---------- | ------ |
-| T1      | `[Finalize concept]`    | `[Both]` | `2`             | `1st April`  | `None`     | `Done` |
+| Task ID | Task                          | Owner        | Estimated Hours | Dependency        | Status |
+| ------- | ----------------------------- | ------------ | ---------------:| ----------------- | ------ |
+| T1      | Finalize concept              | Soham/Adarsh | 2               | None              | Done   |
+| T2      | Component selection (BOM)     | Lakshya      | 2               | T1                | Done   |
+| T3      | Sensor testing (MPU, MQ)      | Soham        | 3               | T2                | Done   |
+| T4      | Circuit wiring                | Lakshya      | 3               | T2                | Done   |
+| T5      | Code development              | Adarsh       | 5               | T3, T4            | Done   |
+| T6      | SD card logging integration   | Adarsh       | 2               | T5                | Done   |
+| T7      | Bluetooth integration         | Soham        | 2               | T5                | Done   |
+| T8      | System integration            | All          | 4               | T5, T6, T7        | Done   |
+| T9      | Testing and debugging         | Jagrut       | 3               | T8                | Done   |
+| T10     | Documentation                 | Lakshya      | 3               | All               | Done   |
 
+---
 
 ## 12.3 Responsibility Split
 
-| Area                 | Main Owner | Support Owner |
-| -------------------- | ---------- | ------------- |
-| Concept              | `[Gopal]`  | `[Kader]`    |
-| Electronics          | `[]`       | `[]`     |
-| Coding               | `[]`       | `[]`     |
-| Mechanical build     | `[]`       | `[]`    |
-| Testing              | `[]`       | `[]`    |
-| Documentation        | `[]`       | `[]`     |
+| Area          | Main Owner | Support Owner |
+|---------------|-----------|--------------|
+| Concept       | Soham     | Adarsh       |
+| Electronics   | Soham     | Lakshya      |
+| Coding        | Adarsh    | Lakshya/Soham|
+| Testing       | Jagrut    | Lakshya      |
+| Documentation | Lakshya   | Jagrut       |
+## 13  Update Log
 
----
-
-# 13. 2 hour Milestones
-
-## 13.1 8-hour Plan
-
-### Bi Hour 1 — Plan and De-risk
-
-Expected outcomes:
-
-- [x] Idea finalized
-- [x] Core interaction decided
-- [x] Sketches made
-- [x] BOM completed
-- [x] Purchase needs identified
-- [ ] Key uncertainty identified
-- [x] Basic feasibility tested
-
-### Bi Hour 2 — Build Subsystems
-
-Expected outcomes:
-
-- [x] Electronics tests completed
-- [ ] CAD / structure planning completed
-- [ ] App UI started if needed
-- [x] Mechanical concept tested
-- [x] Main subsystems partially working
-
-### Bi Hour 3 — Integrate
-
-Expected outcomes:
-
-- [x] Physical body built
-- [x] Electronics integrated
-- [x] Code connected to hardware
-- [ ] App connected if required
-- [x] First playable version exists
-
-### Bi Hour 4 — Refine and Finish
-
-Expected outcomes:
-
-- [x] Technical bugs reduced
-- [x] Playtesting completed
-- [x] Improvements made
-- [x] Documentation completed
-- [x] Final build ready
-
-## 13.2  Update Log
-
-| Week   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
-| ------ | -------------- | ---------------------- | -------------- | -------------- |
-| Week 1 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 2 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-
----
+| Week   | Planned Goal                          | What Actually Happened                                      | What Changed                                         | Next Steps                              |
+|--------|---------------------------------------|--------------------------------------------------------------|------------------------------------------------------|-----------------------------------------|
+| Week 1 | Finalize concept and select components| Idea finalized and sensors selected                          | Shifted from safety-only to interactive system        | Start sensor testing                    |
+| Week 2 | Test sensors and basic wiring         | MPU6050, MQ, and touch sensor tested individually            | MQ sensor required calibration adjustments            | Integrate sensors with controller       |
+| Week 3 | Integrate system and develop code     | All components connected and basic code implemented          | Added SD card logging for black box functionality     | Improve behavior logic and debugging    |
+| Week 4 | Testing, refinement, and documentation| System tested, bugs reduced, and documentation completed     | Improved wiring and response logic                    | Final polish and presentation preparation|
 
 # 14. Risks and Unknowns
 
 ## 14.1 Risk Register
 
-| Risk                                                            | Type         | Likelihood | Impact   | Mitigation Plan                                                                       | Owner                |
-| --------------------------------------------------------------- | ------------ | ---------- | -------- | ------------------------------------------------------------------------------------- | -------------------- |
-| WiFi connection between laptop and ESP32 becomes unstable       | `Technical`  | `Medium`   | `High`   | Keep ESP32 close, ensure stable power supply, reduce network load, add fail-safe stop | `[Gopal]`           |
+| Risk                                              | Type        | Likelihood | Impact | Mitigation Plan                                                                 | Owner     |
+|---------------------------------------------------|------------|-----------|--------|---------------------------------------------------------------------------------|----------|
+| MQ sensor gives inaccurate alcohol readings       | Technical   | Medium    | High   | Calibrate sensor properly, test with controlled inputs, define safe thresholds  | Soham    |
+| Loose wiring inside helmet                        | Hardware    | Medium    | High   | Secure wires using tape/supports, check connections before testing              | Lakshya  |
+| SD card logging failure                          | Technical   | Low       | Medium | Test file writing, ensure proper SD formatting, add error handling              | Adarsh   |
+| Bluetooth communication instability               | Technical   | Medium    | Medium | Keep stable connection, test range, implement fallback behavior                 | Soham    |
+| Sensor noise causing false triggers               | Technical   | Medium    | Medium | Add filtering, threshold tuning, and condition checks                           | Adarsh   |
 
 
 ## 14.2 Biggest Unknown Right Now
 
-What is the single biggest uncertainty in your project at this stage?
-
 **Response:**  
+
+The biggest uncertainty is the reliability and consistency of alcohol detection using the MQ sensor in real-world conditions.
+
+Environmental factors such as airflow, ambient gases, and sensor placement can affect readings. Ensuring accurate detection without false positives remains the main challenge.
 
 
 ---
@@ -535,59 +625,86 @@ What is the single biggest uncertainty in your project at this stage?
 
 ## 15.1 Technical Testing Plan
 
-| What Needs Testing     | How You Will Test It                                                                 | Success Condition                                                                                    |
-| ---------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| `[Wifi connection]`    | `[Check if motor spins via app button]`                                              | `[Both motors accurately respond to wifi signals]`                                                   |
-                       |
+| What Needs Testing      | How You Will Test It                                             | Success Condition |
+|------------------------|------------------------------------------------------------------|------------------|
+| `[MPU6050 motion]`     | `[Move helmet in different directions and monitor readings]`     | `[Consistent and stable motion data]` |
+| `[MQ sensor]`          | `[Expose sensor to alcohol and compare readings]`                | `[Clear distinction between normal and alcohol levels]` |
+| `[Touch sensor]`       | `[Repeated tapping and checking response]`                       | `[Accurate detection without false triggers]` |
+| `[Buzzer output]`      | `[Trigger all system conditions manually]`                       | `[Correct feedback for each condition]` |
+| `[Bluetooth]`          | `[Send commands from phone/terminal]`                            | `[System responds correctly]` |
+| `[SD card logging]`    | `[Run system and inspect saved file]`                            | `[All events logged correctly]` |
+
+
 ## 15.2 Testing and Debugging Log
 
-| Date          | Problem Found                         | Type         | What You Tried                                | Result               | Next Action                                    |
-| ------------- | ------------------------------------- | ------------ | --------------------------------------------- | -------------------- | ---------------------------------------------- |
-| `18th April`  | `Car not balancing properly`          | `Mechanical` | `Add low-friction caster support to one side` | `Worked`             | `improve caster structure`                     |
-
-
-## 15.3 Playtesting Notes
-
-| Tester      | What They Did                        | What Confused Them                    | What They Enjoyed                         | What You Will Change                          |
-| ----------- | ------------------------------------ | ------------------------------------- | ----------------------------------------- | --------------------------------------------- |
-| `Gopal` | `Tried navigating through obstacles` | `Some obstacles ewren't clear enough` | `Liked projection + real car interaction` | `Add a slight red highlight around obstacles` |
-
-
----
+| Problem Found                              | Type        | What You Tried                                      | Result   | Next Action                          |
+|---------------------------------------------|------------|----------------------------------------------------|----------|--------------------------------------|
+| MQ sensor giving unstable readings         | Technical  | Calibrated sensor and adjusted threshold values     | Improved | Further fine-tune calibration        |
+| SD card not writing data                  | Technical  | Checked wiring and corrected SPI connections        | Fixed    | Add error handling in code           |
+| Touch sensor false triggering             | Technical  | Adjusted sensitivity and improved grounding         | Improved | Monitor stability                    |
 
 # 16. Build Documentation
 
 ## 16.1 Fabrication Process
 
-Describe how the project was physically made.
-
-Include:
-
-- cutting,
-- 3D printing,
-- assembly,
-- fastening,
-- wiring,
-- finishing,
-- revisions.
-
 **Response:**  
-`The fabrication process involved designing, manufacturing, assembling, and refining both the physical structure and electronic integration of the system.`
 
-`Design (CAD Modeling):
-The initial model was created using CAD software, where components were designed based on the actual dimensions of the electronic parts. This ensured accurate fitting and minimized errors during assembly.
-Cutting (Laser Cutting):
-The designed parts were fabricated using laser cutting techniques. Sheets were cut precisely according to the CAD model to create the structural base and mounts for components.`
+The fabrication process involved integrating electronic components into a helmet structure while ensuring stability, usability, and clean wiring.
 
-`Components were fixed using adhesives and mechanical supports. Certain parts were intentionally kept modular (not permanently fixed) to allow easy replacement and modification of electronics.
-Surface Finishing:
-Some parts were sanded to smooth rough edges after cutting. Sawdust mixed with adhesive was used to fill gaps and uneven edges, improving structural finish. The final structure was then painted for better aesthetics and durability.`
+### Design
 
-`Environment Setup (Dark Room Fabrication):
-To enhance projection visibility, a controlled dark environment was created using Z-boards, paper sheets, and bedsheets. This minimized external light interference and improved projection clarity.
-Revisions and Iterations:
-Multiple adjustments were made throughout the process, including refining alignment, improving structural stability, repositioning components, and optimizing the interaction between the physical car and projected environment.`
+The placement of all components was planned based on size, accessibility, and functionality. Sensors such as the MPU6050, MQ sensor, and touch sensor were positioned to ensure accurate readings. The microcontroller and SD card module were placed in a protected central location inside the helmet.
 
+---
+
+### Cutting and Modification
+
+Minor modifications were made to the helmet to create space for components and wiring. Openings were carefully created for sensor exposure (especially the MQ sensor) and for routing wires without damaging the structure.
+
+---
+
+### Assembly
+
+All electronic components were assembled inside the helmet. Modules were arranged in a compact layout to maintain balance and comfort while wearing the helmet.
+
+---
+
+### Fastening
+
+Components were secured using adhesives, double-sided tape, and supports to prevent movement during use. Critical components such as the microcontroller and SD card module were fixed firmly to avoid disconnections.
+
+---
+
+### Wiring
+
+All sensors and modules were connected according to the wiring plan. Care was taken to:
+
+- maintain clean routing of wires  
+- avoid loose connections  
+- ensure common grounding across all components  
+
+Wires were bundled and secured to prevent tangling and to improve reliability.
+
+---
+
+### Finishing
+
+The internal setup was organized for a clean and compact look. Excess wires were trimmed or managed, and components were positioned to avoid interference with the user.
+
+The exterior of the helmet was kept intact to maintain usability and safety.
+
+---
+
+### Revisions and Iterations
+
+Multiple iterations were made during the build process:
+
+- repositioning sensors for better accuracy  
+- improving wire management  
+- stabilizing loosely mounted components  
+- refining buzzer placement for clearer sound output  
+
+These changes improved both system performance and overall usability.
 ## 16.2 Build Photos
 
 Add photos throughout the project.
@@ -600,7 +717,7 @@ Suggested images:
 - mechanism test,
 - app screenshot,
 - final build.
-- <img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM (1)" src="https://github.com/user-attachments/assets/74baa570-5770-483e-be6d-d2f03386e37c" />
+<img width="1200" height="1600" alt="WhatsApp Image 2026-04-27 at 5 25 41 PM" src="https://github.com/user-attachments/assets/f33ace1f-9a81-4560-a64f-9447653be56e" />
 
 
 
@@ -610,23 +727,47 @@ Suggested images:
 
 ## 17.1 Final Description
 
-Describe the final version of your project.
-
 **Response:**  
+
+The final system is an interactive smart helmet that integrates multiple sensors to detect user behavior and environmental conditions, respond through sound feedback, and record interaction data.
+
+The helmet uses an MPU6050 to track motion and orientation, an MQ sensor to detect alcohol presence, and a capacitive touch sensor to allow user interaction. A buzzer provides real-time feedback based on system logic, while a Bluetooth module enables external communication and control.
+
+Additionally, the system includes a black box feature using an SD card module, which logs motion data, sensor readings, and key events over time.
+
+The final implementation successfully demonstrates a multi-sensory, reactive, and memory-enabled wearable system that emphasizes interaction, responsiveness, and recorded experience.
 
 
 ## 17.2 What Works Well
 
+- Motion sensing using MPU6050 is stable and responsive  
+- Touch sensor accurately triggers interaction modes  
+- Buzzer provides clear and immediate feedback  
+- Multiple sensors work together without major conflicts  
+- SD card logging successfully stores data  
+- Bluetooth communication works for basic control  
+- Overall system integration is stable  
 
 
 ## 17.3 What Still Needs Improvement
 
+- MQ sensor needs better calibration for accurate alcohol detection  
+- Some false triggers may occur in noisy environments  
+- Behavior logic can be made more advanced and dynamic  
+- Bluetooth interaction can be expanded for better usability  
+- Internal wiring can be further optimized for compactness  
+- Power management can be improved for long-term use  
+
 
 ## 17.4 What Changed From the Original Plan
 
-How did the project change from the initial idea?
-
 **Response:**  
+
+The project initially focused on a more traditional safety-based helmet system with features like accident detection and emergency response.
+
+During development, the concept shifted toward creating an interactive and experiential system. Instead of focusing only on safety, the project evolved into a multi-sensory wearable that reacts to user behavior and environmental conditions.
+
+The addition of SD card logging introduced a memory aspect, transforming the system from a simple reactive device into one that records and reflects interactions over time.
 
 
 ---
@@ -635,76 +776,74 @@ How did the project change from the initial idea?
 
 ## 18.1 Team Reflection
 
-What did your team do well?  
-What slowed you down?  
-How well did you manage time, tasks, and responsibilities?
-
 **Response:**  
+
+The team worked effectively by dividing responsibilities based on individual strengths, which helped in completing tasks efficiently. Collaboration during integration stages was particularly strong, allowing different subsystems to come together smoothly.
+
+One of the main challenges was debugging and sensor calibration, which required multiple iterations and took more time than expected. Managing wiring and ensuring stable connections inside the helmet also required careful effort.
+
+Overall, time and tasks were managed well, and regular discussions helped in resolving issues quickly and maintaining steady progress.*  
 
 
 ## 18.2 Technical Reflection
 
-What did you learn about:
-
-- electronics,
-- coding,
-- mechanisms,
-- fabrication,
-- integration?
-
 **Response:**  
+
+Through this project, we gained practical experience in working with multiple electronic components and integrating them into a single system.
+
+In electronics, we learned how to interface different sensors using I2C, SPI, UART, and analog inputs, and how to manage stable connections and common grounding.
+
+In coding, we developed skills in handling real-time sensor data, implementing decision logic based on multiple inputs, and structuring code for modularity and readability.
+
+From a mechanisms and fabrication perspective, we understood how physical constraints affect electronic design, including component placement, wiring management, and maintaining usability in a wearable system.
+
+In integration, we learned how to combine hardware and software effectively, troubleshoot issues across subsystems, and ensure reliable communication between components.
 
 
 ## 18.3 Design Reflection
 
-What did you learn about:
+**Response:**  
 
-- designing ,
-- delight,
-- clarity,
-- physical interaction,
-- understanding,
-- iteration?
+This project helped us understand that good design is not just about functionality but also about creating meaningful and engaging interactions.
+
+We learned the importance of clarity in how a system responds, ensuring that users can understand feedback easily. The concept of delight was explored through multi-sensory responses, making the system more engaging.
+
+Working on a physical wearable system highlighted the importance of interaction design, including how users naturally move, touch, and respond to feedback.
+
+Iteration played a major role in improving the project. Repeated testing and refinement helped us improve both the technical performance and the overall user experience.
+
+
+## 18.4 If You Had One More Hour
 
 **Response:**  
 
+With additional time, we would focus on improving the system behavior and interaction logic to make it more dynamic and context-aware.
 
-## 18.4 If You Had One More hour
-
-What would you improve next?
-
-**Response:**  
-
-` `
-
----
+We would refine sensor calibration, especially for the MQ sensor, improve Bluetooth communication for better control, and enhance internal wiring and component placement for a cleaner and more robust build.
 
 # 19. Final Submission Checklist
 
 Before submission, confirm that:
 
-- [x] Team details are complete
-- [x] Project description is complete
-- [x] Inspiration sources are included
-- [x] Sketches are added
-- [x] BOM is complete
-- [x] Purchase list is complete
-- [x] Budget summary is complete
-- [x] Mechanical planning is documented if applicable
-- [ ] App planning is documented if applicable
-- [x] Code flowchart is added
-- [x] Task breakdown is complete
-- [x] Weekly logs are updated
-- [x] Risk register is complete
-- [x] Testing log is updated
-- [x] Playtesting notes are included
-- [x] Build photos are included
-- [x] Final reflection is written
-<img width="1131" height="1600" alt="image" src="" />
+- [x] Team details are complete  
+- [x] Project description is complete  
+- [x] Inspiration sources are included  
+- [x] Sketches are added  
+- [x] BOM is complete  
+- [x] Purchase list is complete  
+- [x] Budget summary is complete  
+- [x] Mechanical planning is documented if applicable  
+- [ ] App planning is documented if applicable (Not required for this project)  
+- [x] Code flowchart is added  
+- [x] Task breakdown is complete  
+- [x] Weekly logs are updated  
+- [x] Risk register is complete  
+- [x] Testing log is updated  
+- [x] Playtesting notes are included  
+- [x] Build photos are included  
+- [x] Final reflection is written  
+
+<!-- Add final system image below -->
+
 
 ---
-
-
----
-
-
